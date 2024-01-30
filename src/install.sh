@@ -28,10 +28,10 @@ do
         if ! [[ -d ${dest} ]]
         then
             echo "Making ${dest}..."
-            # mkdir "${dest}"
+            mkdir "${dest}"
         fi
 
         echo "Copying ${src} to ${dest}"
-        # cp -t ${dest} "${src}"
+        cp -t ${dest} "${src}"
     done
 done

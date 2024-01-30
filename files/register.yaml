@@ -1,9 +1,8 @@
-# A register of files to save and install
+# A register of files to save/export
 # Each item corresponds to a group of files (saved in a directory)
 # Each group specifies files either by locations or locations/patterns
 # Each group may specify multiple file subgroups identified by their labels in
 # that case the subgroup is saved in a subdirectory under the directory
-#
 - directory: bash
   files:
     - location: '~'
