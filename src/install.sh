@@ -18,7 +18,7 @@ do
         # Extracting the source
         src=$(echo "${file}" | var="${dir}" yq '.s = "files/" + env(var) |
             with(select(.label != null);
-                    .s = "files/" + env(var) + "/" + .label) | .s + "/*"' -)
+                    .s = "files/" + env(var) + "/" + .label) | .s + "/."' -)
 
         # Extracting the destination
         dest=$(echo "${file}" | yq '.location' -)
@@ -32,6 +32,6 @@ do
         fi
 
         echo "Copying ${src} to ${dest}"
-        cp -t ${dest} "${src}"
+        cp -rt ${dest} ${src}
     done
 done
