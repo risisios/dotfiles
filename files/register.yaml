@@ -1,0 +1,25 @@
+# A register of files to save and install
+# Each item corresponds to a group of files (saved in a directory)
+# Each group specifies files either by locations or locations/patterns
+# Each group may specify multiple file subgroups identified by their labels in
+# that case the subgroup is saved in a subdirectory under the directory
+#
+- directory: bash
+  files:
+    - location: '~'
+      # by default all files in `location` are saved
+      # use the `pattern` entry to save specific files
+      pattern: '.bash*'
+- directory: zsh
+  files:
+    - location: '~'
+      pattern: '.zsh*'
+- directory: nvim
+  files:
+    - location: '~/.config/nvim'
+- directory: tmux
+  files:
+    - label: config
+      location: '~/.config/tmux'
+    - label: scripts
+      location: '~/.tmux'
